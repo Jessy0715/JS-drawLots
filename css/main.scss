@@ -12,7 +12,7 @@
     background-image: radial-gradient(rgba(0, 0, 0, 0.1), black), url('../img/bg.jpg');
 }
 
-#secondPage, #thirdPage {
+#page2, .draw__result__poem {
     display: none;
 }
 
@@ -21,6 +21,11 @@ body {
     font-family: 'Noto Serif TC', serif;
 }
 
+.wrapper {
+    &--bg {
+        @include bgCover();
+    }
+}
 // .btn2 {
 //     @include btnTemplate(0.5rem, 1rem);
 //     color: #FFF;
@@ -39,20 +44,27 @@ body {
 // }
 
 .start {
-    margin-top: 1rem;
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 128px;
+    background-color: #FFF;
+    display: flex;
+
     &__block {
-        max-width: 380px;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
     &__btn {
         @include btnTemplate(0.5rem, 2rem);
+        width: 385px;
         color: #000;
         font-size: 1.5rem;
         font-weight: bold;
         background-color: #fff;
-        width: 100%;
         &.disabled {
             color: #FFF;
             background-color: rgba(214, 214, 214, 0.911);
@@ -80,18 +92,18 @@ body {
     h5 {
         font-weight: bold;
     }
-    &--bg {
-        @include bgCover();
-        // height: 670px;
-    }
+    // &--bg {
+    //     @include bgCover();
+    //     // height: 670px;
+    // }
     &--bgFull {
-        @include bgCover();
         height: 100vh;
     }
     &__cxt {
         display: flex;
         justify-content: space-between;
         max-width: 1280px;
+        height: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -148,6 +160,7 @@ body {
     // ++++ 籤運結果說明 ++++
 
     &__result {
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -175,6 +188,8 @@ body {
     height: 90%;
     margin: auto;
     padding: 3rem;
+    display: flex;
+    justify-content: center;
 
     position: relative;
 
@@ -226,15 +241,15 @@ body {
     }
 }
 
-#area1 {
-    height: 87vh;
+#drawArea {
+    height: calc(100vh - 128px);
     transition: all 300ms ease-in-out;
     &.active {
         height: 100vh;
     }
 }
 
-#area2 {
+#startArea {
     transition: all 300ms ease-in-out;
     &.active {
         margin-top: 0;
