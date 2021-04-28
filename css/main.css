@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;900&display=swap");
+#secondPage, #thirdPage {
+  display: none;
+}
+
+body {
+  font-family: 'Noto Serif TC', serif;
+}
+
+.start {
+  margin-top: 1rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start__block {
+  max-width: 380px;
+}
+
+.start__btn {
+  padding: 0.5rem 2rem;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #fff;
+  width: 100%;
+}
+
+.start__btn.disabled {
+  color: #FFF;
+  background-color: rgba(214, 214, 214, 0.911);
+  border: none;
+  pointer-events: none;
+}
+
+.reset__btn {
+  padding: 0.5rem 2rem;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  width: 100%;
+}
+
+.draw {
+  color: #FFF;
+}
+
+.draw h5 {
+  font-weight: bold;
+}
+
+.draw--bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1), black), url("../img/bg.jpg");
+}
+
+.draw--bgFull {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1), black), url("../img/bg.jpg");
+  height: 100vh;
+}
+
+.draw__cxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.draw__cxt__statement {
+  max-width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 0 2rem 0;
+}
+
+.draw__cxt__statement p {
+  line-height: 1;
+}
+
+.draw__cxt__leading {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.draw__cxt__leading h1 {
+  font-size: 5.5rem;
+  font-weight: 900;
+  font-family: 'Noto Serif TC', serif;
+}
+
+.draw__class {
+  width: 368px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.draw__class input {
+  display: none;
+}
+
+.draw__class input:checked + label {
+  color: #000;
+  background-color: #FFF;
+}
+
+.draw__class label {
+  font-size: 1rem;
+  width: 112px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 1rem 0;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.draw__class label:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.draw__result {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.draw__result__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.draw__result__poem {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.draw__result__poem p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.lots {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  padding: 3rem;
+  position: relative;
+}
+
+.lots--border {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.lots__txt {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+}
+
+.lots__txt--lt {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.lots__txt--rt {
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.lots__txt--lb {
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.lots__txt--rb {
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.lots__cxt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lots__cxt__number, .lots__cxt__year {
+  font-size: 1.5rem;
+  letter-spacing: 2.5rem;
+}
+
+.lots__cxt__luck {
+  font-size: 15rem;
+  font-weight: bold;
+}
+
+#area1 {
+  height: 87vh;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+#area1.active {
+  height: 100vh;
+}
+
+#area2 {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+#area2.active {
+  margin-top: 0;
+  height: 0;
+}
+/*# sourceMappingURL=main.css.map */
