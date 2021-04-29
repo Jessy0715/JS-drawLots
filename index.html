@@ -110,117 +110,6 @@
         </section>
     </div>
 
-    <!-- 主頁 -->
-    <!-- <section class="draw draw--bg" id="area1">
-        <div class="draw__cxt px-3 py-5">
-            <div class="draw__cxt__statement">
-                <div class="mb-5">
-                    <h5 class="mb-4">求籤步驟</h5>
-                    <p>① 請虔誠地在心中默念您的姓名、出生年月日、住址 </p>
-                    <p>② 選擇欲請教的求籤類別後，誠心地在心中詳細說明</p>
-                    <p>③ 說明完後即可點選「開始求籤」按鈕進行線上求籤</p>
-                </div>
-                <div>
-                    <h5 class="mb-4">求籤類別</h5>
-                    <div class="draw__class">
-                        <div class="draw__class__item">
-                            <input type="radio" name="drawClassItem" id="drawClassItem-1" class="draw__class__btn">
-                            <label for="drawClassItem-1">網站上線</label>
-                        </div>
-                        <div class="draw__class__item">
-                            <input type="radio" name="drawClassItem" id="drawClassItem-2" class="draw__class__btn">
-                            <label for="drawClassItem-2">感情姻緣</label>
-                        </div>
-                        <div class="draw__class__item">
-                            <input type="radio" name="drawClassItem" id="drawClassItem-3" class="draw__class__btn">
-                            <label for="drawClassItem-3">事業工作</label>
-                        </div>
-                        <div class="draw__class__item">
-                            <input type="radio" name="drawClassItem" id="drawClassItem-4" class="draw__class__btn">
-                            <label for="drawClassItem-4">家庭生活</label>
-                        </div>
-                        <div class="draw__class__item">
-                            <input type="radio" name="drawClassItem" id="drawClassItem-5" class="draw__class__btn">
-                            <label for="drawClassItem-5">求財運勢</label>
-                        </div>
-                        <div class="draw__class__item">
-                            <input type="radio" name="drawClassItem" id="drawClassItem-6" class="draw__class__btn">
-                            <label for="drawClassItem-6">參選總統</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="draw__cxt__leading">
-                <h1>線 上 求 籤 。</h1>
-            </div>
-        </div>
-    </section>
-    <section class="start" id="area2">
-        <div class="start__block">
-            <button class="start__btn disabled">開始求籤</button>
-        </div>
-    </section> -->
-
-
-
-    <!-- 籤運 -->
-    <!-- <aside id="secondPage">
-        <section class="draw draw--bgFull d-flex">
-            <main class="lots lots--border">
-                <div class="lots__txt lots__txt--lt">線</div>
-                <div class="lots__txt lots__txt--rt">上</div>
-                <div class="lots__txt lots__txt--lb">求</div>
-                <div class="lots__txt lots__txt--rb">籤</div>
-                <div class="lots__cxt">
-                    <div class="lots__cxt__number mb-5">第四十八籤</div>
-                    <h1 class="lots__cxt__luck mb-5">中吉</h1>
-                    <div class="lots__cxt__year">【戊辛】</div>
-                </div>
-            </main>
-        </section>
-    </aside> -->
-
-
-    <!-- 籤運結果說明 -->
-
-    <!-- <aside id="thirdPage">
-        <section class="draw draw--bgFull d-flex" >
-            <main class="lots lots--border">
-                <div class="lots__txt lots__txt--lt">線</div>
-                <div class="lots__txt lots__txt--rt">上</div>
-                <div class="lots__txt lots__txt--lb">求</div>
-                <div class="lots__txt lots__txt--rb">籤</div>
-                <div class="draw__result">
-                    <div class="draw__result__detail">
-                        <div>
-                            <h5 class="mb-4">聖意</h5>
-                            <p>遇貴者　訟和平　病驚險　莫求名 <br>
-                                財物耗　婚宜停　逢寅字　事漸亨 
-                            </p>
-                            <h5 class="mb-4">解曰</h5>
-                            <p class="mb-5">此籤家道不安　須防人口舌　怨恨臨門　財有失<br>
-                                逢貴人提挈方保　漸亨不成　多口舌<br>
-                                問婚訟平　病有驚　財物耗散　名利空虛<br>
-                                只宜守舊　不利遠行　防親人侵損也　 
-                            </p>
-                            <div class="reset">
-                                <button type="button" class="reset__btn">重新求籤</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="draw__result__poem">
-                        <h5><small>第 四 十 八 籤 ︻ 戊 辛 ︼ <span class="draw__result__lot">中 吉</span></small></h5>
-                        <p>登 山 涉 水 正 天 寒</p>
-                        <p>兄 弟 姻 親 那 得 安</p>
-                        <p>不 遇 虎 頭 人 一 喚</p>
-                        <p>全 家 誰 保 汝 重 歡</p>
-                    </div>
-                </div>
-            </main>
-        </section>
-    </aside> -->
-
-
     <!-- 爬梳邏輯順序:
         *** html 結構位置要跟著動畫型態走 ***
         1. 求籤類別點選，開始求籤 active
@@ -229,39 +118,40 @@
         4. 重新抽籤 reset
     -->
 
-
     <script>
 
         let drawClass = document.querySelectorAll('.draw__class');
-        console.log('drawClass', drawClass);
+        // console.log('drawClass', drawClass);
 
         let drawClassArr = Array.from(drawClass);
         // console.log('drawClassArr', drawClassArr);
-
 
         let selectBtn = document.getElementsByClassName('draw__class__btn');
         let startBtn = document.querySelector(".start__btn");
         let resetBtn = document.querySelector(".reset__btn");
 
-
         let lotsLuck = document.querySelector('.lots__cxt__luck');
         let lotsLuck_sm = document.querySelector('.draw__result__lot');
 
+
+
+        //讀取求籤項目的監聽
         drawClassArr.forEach( function(item) {
-            // console.log(item);
+            console.log(item);
             item.addEventListener('click', handleClick );
         })
 
-
+        //任一求籤項目被選定，開始求籤按鈕移除 disabled
         function handleClick() {
             for ( let i= 0; i < selectBtn.length ; i++) {
-                console.log(selectBtn[i]);
+                // console.log(selectBtn[i]);
                 if ( selectBtn[i].checked ) {
                     startBtn.classList.remove('disabled');
                 }
             }
         }
 
+        //創造亂數籤運
         function randomNum() {
             return Math.floor(Math.random()*6);
         }
@@ -269,7 +159,7 @@
         function randomLots() {
             let lots = ['大吉', '中吉', '小吉', '小兇', '中兇', '大凶'];
             let resultRandom = lots[randomNum()];
-            console.log(resultRandom);
+            // console.log(resultRandom);
             lotsLuck.innerHTML = resultRandom;
             lotsLuck_sm.innerHTML = resultRandom;
         }
@@ -298,48 +188,25 @@
 
         //重新抽籤
         function reset() {
-
+            $('#poem').delay(600).fadeOut(1000, function() {
+                $('#page2').css('opacity', '0')
+                           .hide()
+                           .fadeOut() 
+                $('#page1').css('display', 'flex')
+                           .hide()
+                           .fadeIn(1000)
+                $('#luck').fadeIn(1000)
+                $('#drawArea').removeClass('active');
+                $('#startArea').removeClass('active');
+                $('.start__btn').show();
+            })
+            startBtn.classList.add('disabled')
         }
-
-
-
-    function startHandler() {
-        if (!startBtn.classList.contains('disabled')) {
-        startBtn.style.display = 'none';
-        mainArea.classList.add('active');
-        startArea.classList.add('active');
-        titleType.innerHTML = '';
-        txtType.innerHTML = '';
-        poemType();
-        $('.main-page')
-            .delay(450)
-            .fadeOut(1000, function() {
-                $('.secondary-page')
-                    .css('display', 'flex')
-                    .hide()
-                    .delay(450)
-                    .fadeIn(1000);
-                $('.result-fortune')
-                    .delay(2900)
-                    .fadeOut(450, function() {
-                    $('.result-poem')
-                        .css('display', 'flex')
-                        .hide()
-                        .delay(450)
-                        .fadeIn(1000);
-                    });
-            });
-        }
-    }
 
         startBtn.addEventListener('click', start );
         resetBtn.addEventListener('click', reset );
 
     </script>
-
-
-
-
 
 </body>
 

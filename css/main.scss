@@ -12,37 +12,37 @@
     background-image: radial-gradient(rgba(0, 0, 0, 0.1), black), url('../img/bg.jpg');
 }
 
+body {
+    font-family: 'Noto Serif TC', serif;
+}
 
 #page2, #poem {
     display: none;
 }
 
-//++++ 主頁 ++++
-body {
-    font-family: 'Noto Serif TC', serif;
+#drawArea {
+    height: calc(100vh - 128px);
+    transition: all 500ms ease-in-out;
+    &.active {
+        height: 100vh;
+    }
 }
+
+#startArea {
+    transition: all 500ms ease-in-out;
+    &.active {
+        margin-top: 0;
+        height: 0;
+    }
+}
+
+//++++ 主頁 ++++
 
 .wrapper {
     &--bg {
         @include bgCover();
     }
 }
-// .btn2 {
-//     @include btnTemplate(0.5rem, 1rem);
-//     color: #FFF;
-//     margin: 0 1rem 1rem 0;
-//     width: 22%;
-//     background-color: transparent;
-//     border: 1px solid #FFF;
-//     transition: all 300ms ease-in-out;
-//     &:hover {
-//         background-color: rgba(255, 255, 255, 0.3);
-//     }
-//     &:active, &.active {
-//         color: #000;
-//         background-color: #FFF;
-//     }
-// }
 
 .start {
     height: 128px;
@@ -84,6 +84,9 @@ body {
         background-color: transparent;
         border: 1px solid #FFF;
         width: 100%;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
     }
 }
 
@@ -93,10 +96,6 @@ body {
     h5 {
         font-weight: bold;
     }
-    // &--bg {
-    //     @include bgCover();
-    //     // height: 670px;
-    // }
     &--bgFull {
         height: 100vh;
     }
@@ -239,22 +238,6 @@ body {
             font-size: 15rem;
             font-weight: bold;
         }
-    }
-}
-
-#drawArea {
-    height: calc(100vh - 128px);
-    transition: all 300ms ease-in-out;
-    &.active {
-        height: 100vh;
-    }
-}
-
-#startArea {
-    transition: all 300ms ease-in-out;
-    &.active {
-        margin-top: 0;
-        height: 0;
     }
 }
 
