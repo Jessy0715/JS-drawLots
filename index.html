@@ -186,7 +186,15 @@
         }
 
         //重新抽籤
+
+        function clearChecked() {
+            for (  let i= 0; i < selectBtn.length ; i++ ) {
+                selectBtn[i].checked = false;
+            }
+        }
+
         function reset() {
+            clearChecked();
             $('#poem').delay(600).fadeOut(1000, function() {
                 $('#page2').css('opacity', '0')
                            .hide()
