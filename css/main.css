@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;900&display=swap");
-#page2, .draw__result__poem {
+#page2, #poem {
   display: none;
 }
 
