@@ -28,7 +28,7 @@
                     </div>
                     <div>
                         <h5 class="mb-4">求籤類別</h5>
-                        <div class="draw__class">
+                        <div class="draw__class" id="drawW">
                             <div class="draw__class__item">
                                 <input type="radio" name="drawClassItem" id="drawClassItem-1" class="draw__class__btn">
                                 <label for="drawClassItem-1">網站上線</label>
@@ -134,12 +134,15 @@
         let lotsLuck_sm = document.querySelector('.draw__result__lot');
 
 
+        //讀取求籤項目的監聽: 方法一
+        // drawClassArr.forEach( function(item) {
+        //     // console.log(item);
+        //     item.addEventListener('click', handleClick );
+        // })
 
-        //讀取求籤項目的監聽
-        drawClassArr.forEach( function(item) {
-            // console.log(item);
-            item.addEventListener('click', handleClick );
-        })
+
+        // 讀取求籤項目的監聽: 方法二 (Event Delegation)
+        document.getElementById('drawW').addEventListener('click', handleClick);
 
         //任一求籤項目被選定，開始求籤按鈕移除 disabled
         function handleClick() {
